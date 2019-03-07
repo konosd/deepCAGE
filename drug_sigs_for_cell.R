@@ -1,5 +1,9 @@
 drug_sigs_per_line <- function(cell_line,sig_info,sig_metrics) {
   
+  # This functions takes as input a cell line, the CMAP signature info and metrics
+  # and returns a dataframe with 1 signature per unique compound.
+  # Multiple signatures of the same drug are filtered by taking into account the quality of the signatures.
+  # To calculate the quality a combination of is_exemplar, TAS and number of replicates is used.
   # cell_line character of cell line
   # sig_info dataframe of GSE info
   # sig_metrics dataframe of GSE metrics
